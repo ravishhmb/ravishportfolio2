@@ -1,0 +1,16 @@
+.icons{
+    position: relative;
+    top:60px;
+    left: 0;
+  }
+  .icons a{
+    margin-right:2.2rem;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    transition: all 0.5s ease;
+  }
+  .icons a:hover{
+    color: var(--secondary-color);
+    padding-bottom: 1rem;
+    text-shadow: 0 0 40px yellow;
+  }

@@ -1,0 +1,221 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Ubuntu:wght@300&display=swap');
+:root{
+  --primary-color:aliceblue;
+  --secondary-color:yellow;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-image: url("images/background.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Ubuntu', sans-serif;
+  line-height: 1.5;
+}
+.menu-items{
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 0.7rem 0.2rem;
+  padding: 0.5rem 1rem;
+}
+.item{
+  font-size: 1.7rem;
+  margin: .7rem 1rem;
+  list-style-type: none;
+}
+.item a{
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+.item a:hover{
+  color: var(--secondary-color);
+  padding-top: 0.3rem;
+  border-top: 3px solid var(--secondary-color);;
+  border-radius: 20px;
+}
+.main-container{
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  height: auto;
+}
+/* -----------------Headings container start--------------- */
+.conatiner-1{
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+.headings{
+  width: 80%;
+  padding: 5rem;
+  margin:5rem auto;
+}
+.namaste,.secondary-namaste{
+  font-size: 4rem;
+  font-family: 'Ubuntu', sans-serif;
+}
+.namaste{
+  background: linear-gradient(orange,white,green);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.secondary-namaste,
+.secondary-text{
+  color: var(--secondary-color);
+}
+.lg-heading{
+  color: var(--primary-color);
+  font-family: 'Audiowide', cursive;
+}
+.lg-heading,
+.secondary-text{
+  text-transform: uppercase;
+  font-size: 5rem;
+  font-weight: 300;
+}
+.sm-heading{
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+/* -----------------Headings container End------------------ */
+
+
+/* -------------------Image conatiner start---------------- */
+.container-2{
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+.profile-img{
+  width: 80%;
+  margin: 8rem auto;
+  text-align: center;
+}
+#profile{
+  width: 60%;
+  border-radius: 50%;
+  border: 8px solid var(--secondary-color);
+}
+/* --------------------Image conatiner End-------------------- */
+
+/* -------------Hire button start-------------- */
+.hire{
+  position: relative;
+  top: 30px;;
+  display: inline-block;
+  font-size: 1.5rem;
+  padding: 0.5rem 2rem;
+  font-weight: 700; 
+  overflow: hidden;
+  color:aliceblue;
+  text-decoration: none;
+  letter-spacing: 3px;
+  transition: 0,2s;
+}
+.hire:hover{
+  color: black;
+  background-color:yellow;
+  box-shadow: 0 0 10px yellow,0 0 40px yellow, 0 0 80px yellow;
+  transition-delay: 1s;
+}
+.hire span{
+  position: absolute;
+  display: block;
+}
+.hire span:nth-child(1){
+  top:0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg,transparent,yellow);
+}
+.hire:hover span:nth-child(1){
+  left:100%;
+  transition: 0.5s;
+}
+.hire span:nth-child(3){
+  bottom:0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg,transparent,yellow);
+}
+.hire:hover span:nth-child(3){
+  right:100%;
+  transition: 0.5s;
+  transition-delay: 0.5s;
+}
+.hire span:nth-child(2){
+  top:-100;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg,transparent,yellow);
+}
+.hire:hover span:nth-child(2){
+  top:100%;
+  transition: 0.5s;
+  transition-delay: 0.25s;
+}
+.hire span:nth-child(4){
+  bottom:-100;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg,transparent,yellow);
+}
+.hire:hover span:nth-child(4){
+  bottom:100%;
+  transition: 0.5s;
+  transition-delay: 0.75s;
+}
+/* ------------------Hire button End----------------- */
+
+@media only screen and (max-width:1200px){
+  .menu-items{
+    display: flex;
+    flex-direction: column;
+  }
+  .item{
+    font-size: 1rem;
+  }
+  .main-container{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .headings{
+    text-align: center;
+  }
+  .namaste,.secondary-namaste,.sm-heading{
+    font-size: 1rem;
+  }
+  .lg-heading,
+.secondary-text{
+  font-size: 1.5rem;
+}
+.profile-img{
+  margin: 0rem auto;
+}
+#profile{
+  width: 30%;
+  border: 3px solid var(--secondary-color);
+  }
+  .hire{
+  font-size: 0.8rem;
+  padding: 0.5rem 1rem;
+  }
+  .headings{
+    margin:1rem auto;
+    padding:1rem 0;
+  }
+}
