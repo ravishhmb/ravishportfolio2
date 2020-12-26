@@ -18,7 +18,7 @@ body{
   font-family: 'Ubuntu', sans-serif;
   line-height: 1.5;
 }
-.menu-items{
+/* .menu-items{
   position: relative;
   display: flex;
   justify-content: flex-end;
@@ -32,16 +32,105 @@ body{
   list-style-type: none;
 }
 .item a{
+  position: relative;
   color: var(--primary-color);
   text-decoration: none;
   transition: all 0.2s ease;
 }
-.item a:hover{
+ .item a:hover{
   color: var(--secondary-color);
   padding-top: 0.3rem;
   border-top: 3px solid var(--secondary-color);;
   border-radius: 20px;
+   transform: scale(1);
+  transform-origin: left;
+}  */
+
+
+.header{
+  margin: auto;
+  width: 50%;
+  height: 180px;
+  background: rgb(10,10,10);
+  position: relative;
+  top: -140px;
+  align-items: center;
+  border-radius: 0 0 25px 25px;
+  transition: all 0.5s;
 }
+.header::before,
+.header::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0 0 25px 25px;
+  background: linear-gradient(45deg,#ff0000,#00f0f0,#00ff00,#0000ff,#ff000069);
+  z-index: -1;
+  transform: scale(1.02);
+  background-size: 500%;
+  animation: anim 20s linear infinite;
+}
+
+@keyframes anim{
+  0%,100%{
+    background-position: 0 0;
+  }
+  50%{
+    background-position: 300% 0;
+  }
+}
+.header::after{
+  filter:blur(10px);
+}
+input{
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translate(-50%);
+  -webkit-appearance:none;
+  outline: none;
+  cursor: pointer;
+}
+input::before{
+  content: '\f103';
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: 'Font Awesome 5 Free';
+  color: #f1f1f196;
+}
+.a{
+  margin: 2.5rem;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: var(--primary-color);
+  position: absolute;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+.a:hover{
+  color: var(--secondary-color);
+  border-radius: 20px;
+  border-top: 3px solid var(--secondary-color);
+}
+.a:nth-child(2){
+  left: 5%;
+} 
+.a:nth-child(3){
+  left: 20%;
+} 
+.a:nth-child(4){
+  right: 5%;
+} 
+.a:nth-child(5){
+  right:20%;
+}
+
+
+
+
 .main-container{
   position: relative;
   display: grid;
@@ -87,6 +176,7 @@ body{
   font-size: 2rem;
   color: var(--primary-color);
 }
+
 /* -----------------Headings container End------------------ */
 
 
@@ -126,6 +216,7 @@ body{
   color: black;
   background-color:yellow;
   box-shadow: 0 0 10px yellow,0 0 40px yellow, 0 0 80px yellow;
+  
 }
 .hire span{
   position: absolute;
@@ -158,13 +249,7 @@ body{
 /* ------------------Hire button End----------------- */
 
 @media only screen and (max-width:1200px){
-  .menu-items{
-    display: flex;
-    flex-direction: column;
-  }
-  .item{
-    font-size: 1rem;
-  }
+ 
   .main-container{
     display: flex;
     flex-direction: column-reverse;
@@ -173,25 +258,65 @@ body{
     text-align: center;
   }
   .namaste,.secondary-namaste,.sm-heading{
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
   .lg-heading,
 .secondary-text{
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 .profile-img{
-  margin: 0rem auto;
+  margin: 2rem auto;
 }
 #profile{
-  width: 30%;
+  width: 50%;
   border: 3px solid var(--secondary-color);
   }
   .hire{
-  font-size: 0.8rem;
+  font-size: 1rem;
   padding: 0.5rem 1rem;
   }
   .headings{
-    margin:1rem auto;
+    margin:0rem auto;
     padding:1rem 0;
   }
+
+  .header{
+    width: 60%;
+    height: 160px;
+    border-radius: 0 0 40px 40px;
+  }
+  .a{
+    font-size: 0.8rem;
+    text-align: center;
+  }
+  .a:nth-child(2){
+    top: -10%;
+    left:10%;
+    right: 10%;
+  } 
+  .a:nth-child(3){
+    top: 5%;
+    left:10%;
+    right: 10%;
+  } 
+  .a:nth-child(4){
+    top: 20%;
+    left:10%;
+    right: 10%;
+  } 
+  .a:nth-child(5){
+    top:35%;
+    left:10%;
+    right: 10%;
+  }
+  input::before{
+    font-size: 1.5rem;
+  }
+ 
+  .header::before,
+.header::after{
+  border-radius: 0 0 40px 40px;
+}
+  /* -------------------------------------------------------------------- */
+
 }
