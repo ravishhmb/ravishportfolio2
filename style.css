@@ -107,8 +107,8 @@ input::before{
 
 
 .main-container{
-  position: relative
-  bottom:2rem;
+  position: relative;
+  bottom: 2rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   width: 100%;
