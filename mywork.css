@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Ubuntu:wght@300&display=swap');
+:root{
+  --primary-color:aliceblue;
+  --secondary-color:yellow;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-image: url("images/background.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Ubuntu', sans-serif;
+  line-height: 1.5;
+}
+
+/* -------------------------Navigation Bar start------------------------ */
+
+.header{
+  margin: auto;
+  width: 50%;
+  height: 190px;
+  background: rgb(10,10,10);
+  position: relative;
+  top: -140px;
+  align-items: center;
+  border-radius: 0 0 25px 25px;
+  transition: all 0.5s;
+}
+.header::before,
+.header::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0 0 25px 25px;
+  background: linear-gradient(45deg,#ff0000,#00f0f0,#00ff00,#0000ff,#ff000069);
+  z-index: -1;
+  transform: scale(1.02);
+  background-size: 500%;
+  animation: anim 20s linear infinite;
+}
+
+@keyframes anim{
+  0%,100%{
+    background-position: 0 0;
+  }
+  50%{
+    background-position: 300% 0;
+  }
+}
+.header::after{
+  filter:blur(10px);
+}
+input{
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translate(-50%);
+  -webkit-appearance:none;
+  outline: none;
+  cursor: pointer;
+}
+input::before{
+  content: '\f103';
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: 'Font Awesome 5 Free';
+  color: #f1f1f196;
+}
+.a{
+  margin: 2.5rem;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: var(--primary-color);
+  position: absolute;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+.a:hover{
+  color: var(--secondary-color);
+  border-radius: 20px;
+  border-top: 3px solid var(--secondary-color);
+}
+.a:nth-child(2){
+  left: 5%;
+} 
+.a:nth-child(3){
+  left: 20%;
+} 
+.a:nth-child(5){
+  right: 5%;
+} 
+.a:nth-child(4){
+  right:25%;
+}
+
+.mywork-heading{
+    font-size: 4rem;
+    color: var(--primary-color);
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 600;
+    margin: 3rem 0 0 8rem;
+    text-decoration: overline;
+  }
+  .secondary-text{
+    color: var(--secondary-color);
+  }
+
+  .container{
+      width: 100%;
+      margin-top: 4rem;
+    display: flex;
+      align-items: center;
+      overflow: hidden;
+      margin-bottom: 3rem;
+  }
+  .card{
+      margin: 1rem 0 0 6rem;
+      background-color: aliceblue;
+      box-shadow:0 0 20px rgb(239, 240, 236);
+      border-radius: 7%;
+      transition: all 0.5s ease;
+
+  }
+  img{
+      width:100%;
+      height: auto;
+  }
+  #drum-img{
+      width:100%;
+  }
+  .text{
+    width: 100%;
+    color: tomato;
+    font-size: 1.3rem;
+    height: auto;
+  }
+  h2{
+      font-size: 2rem;
+      text-align:center;
+      padding: 1rem;
+      font-weight: 900;
+  }
+  .card:hover{
+      transform: scale(1.03);
+  }
+  .drum-link{
+      text-decoration: none;
+      
+  }
+
+  /* --------------------------------------------------------------------------------------------- */
+
+  @media only screen and (max-width:1200px)
+  {
+    
+    .container{
+        width: 80%;
+        margin: 0 auto;
+        margin-bottom: 3rem;
+        display:flex;
+        flex-direction:column;
+        justify-content: center;
+        text-align: center;
+    }
+    .img{
+        width: 100%;
+    }
+    #drum-img{
+        width: 100%;
+    }
+    .card{
+        width: 80%;
+        margin: 0 auto;
+    }
+    h2{
+        font-size: 1.2rem;
+        padding: 0.5rem;
+    }
+
+    .mywork-heading{
+        text-align: center;
+        font-size: 2rem;
+        margin: 1rem auto;
+    }
+
+
+
+
+    .header{
+        width: 60%;
+        height: 170px;
+        border-radius: 0 0 40px 40px;
+      }
+      .a{
+        font-size: 0.8rem;
+        text-align: center;
+      }
+      .a:nth-child(2){
+        top: -10%;
+        left:10%;
+        right: 10%;
+      } 
+      .a:nth-child(3){
+        top: 5%;
+        left:10%;
+        right: 10%;
+      } 
+      .a:nth-child(4){
+        top: 20%;
+        left:10%;
+        right: 10%;
+      } 
+      .a:nth-child(5){
+        top:35%;
+        left:10%;
+        right: 10%;
+      }
+      input::before{
+        font-size: 1.5rem;
+      }
+     
+      .header::before,
+    .header::after{
+      border-radius: 0 0 40px 40px;
+    }
+  }
