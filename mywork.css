@@ -114,11 +114,9 @@ input::before{
 
   .container{
       width: 100%;
-      margin-top: 4rem;
-    display: flex;
+      display: flex;
       align-items: center;
-      overflow: hidden;
-      margin-bottom: 3rem;
+      padding: 2rem;
   }
   .card{
       margin: 1rem 0 0 6rem;
@@ -131,10 +129,14 @@ input::before{
   img{
       width:100%;
       height: auto;
+      
+
   }
   #drum-img{
-      width:100%;
-  }
+      width:300px;
+      height: 250px;
+      background-size: cover;
+    }
   .text{
     width: 100%;
     color: tomato;
@@ -163,22 +165,23 @@ input::before{
     .container{
         width: 80%;
         margin: 0 auto;
-        margin-bottom: 3rem;
         display:flex;
         flex-direction:column;
         justify-content: center;
         text-align: center;
     }
-    .img{
-        width: 100%;
+    .container-item{
+      margin-bottom: 3rem;
+      width:90%;
     }
     #drum-img{
         width: 100%;
     }
     .card{
-        width: 80%;
-        margin: 0 auto;
+      width: 80%;
+      margin: 0 auto;
     }
+
     h2{
         font-size: 1.2rem;
         padding: 0.5rem;
