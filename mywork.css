@@ -126,7 +126,7 @@ input::before{
       transition: all 0.5s ease;
 
   }
-  img{
+  .img{
       width:100%;
       height: auto;
       
@@ -170,16 +170,17 @@ input::before{
         justify-content: center;
         text-align: center;
     }
-    .container-item{
-      margin-bottom: 3rem;
-      width:90%;
+    .img{
+      width: 100%;
+      margin: 0 auto;
     }
     #drum-img{
-        width: 100%;
+      width: 250px;
+      height: 200px;
     }
     .card{
-      width: 80%;
-      margin: 0 auto;
+      max-width: 100%;
+      margin: 0 auto 3rem;
     }
 
     h2{
