@@ -17,7 +17,6 @@ body{
   background-size: cover;
   font-family: 'Ubuntu', sans-serif;
   line-height: 1.5;
-  overflow:hidden;
 }
 
 
@@ -124,16 +123,6 @@ input::before{
   width: 80%;
   padding: 5rem;
   margin:5rem auto;
-  animation: slide 1.5s ease;
-  animation-fill-mode: forwards;
-}
-@keyframes slide{
-  0%{
-    transform: translateX(-500px);
-  }
-  100%{
-    transform: translateX(0px);
-  }
 }
 .namaste,.secondary-namaste{
   font-size: 4rem;
@@ -182,17 +171,8 @@ input::before{
   width: 60%;
   border-radius: 50%;
   border: 8px solid var(--secondary-color);
-  animation: slide-img 1.5s ease;
-  animation-fill-mode: forwards;
 }
-@keyframes slide-img{
-  0%{
-    transform: translateX(500px);
-  }
-  100%{
-    transform: translateX(0px);
-  }
-}
+
 /* --------------------Image conatiner End-------------------- */
 
 /* -------------Hire button start-------------- */
