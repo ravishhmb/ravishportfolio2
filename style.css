@@ -234,8 +234,11 @@ input::before{
   .headings{
     text-align: center;
   }
-  .namaste,.secondary-namaste,.sm-heading{
+  .secondary-namaste,.sm-heading{
     font-size: 1.5rem;
+  }
+  .namaste{
+    font-size: 2rem;
   }
   .lg-heading,
 .secondary-text{
